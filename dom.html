@@ -291,8 +291,8 @@
         var clipH = clipY ? Math.max(0, destY+destH-clipY) : 0;
         
         if (clipH < destH) {
-            temp = '-webkit-transform: translate3d(' + destX + 'px, ' + destY + 'px, 0) ';
-            temp = '-moz-transform: translate3d(' + destX + 'px, ' + destY + 'px, 0) ';
+            temp = 'transform: translate3d(' + destX + 'px, ' + destY + 'px, 0) ';
+            // temp = '-moz-transform: translate3d(' + destX + 'px, ' + destY + 'px, 0) ';
             temp += 'scale(' + (sprite.w * scale * sprite.factor) + ',' + (sprite.h * scale * sprite.factor) + ') ';
             
             node.style.cssText = temp;
@@ -306,8 +306,8 @@
       node.classList.add('domElements');
       node.classList.add(sprite.name);
 
-      temp = '-webkit-transform: translate3d(-1000px, 0, 0) ';
-      temp += '-moz-transform: translate3d(-1000px, 0, 0)';
+      temp = 'transform: translate3d(-1000px, 0, 0) ';
+      // temp += '-moz-transform: translate3d(-1000px, 0, 0)';
       node.style.cssText = temp;
 
 
